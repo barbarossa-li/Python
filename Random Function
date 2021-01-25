@@ -1,0 +1,51 @@
+import random  
+class RandomFun():
+    def __init__(self, a,b,step, seed,sequence):
+        self.a=a
+        self.b=b
+        self.step=step
+        self.seed=seed
+        self.sequence=sequence
+        
+        
+    # choice() 从序列的元素中随机挑一个， 比如从0-99中随机挑一个： random.choice(range(100))
+    def getChoice(self):
+        print("choice() 从序列的元素中随机挑一个， 比如从0-99中随机挑一个： random.choice(range(100))")
+        return random.choice(range(self.a,self.b))
+    
+    #randrange(): 从指定范围内按指定基数递增的集合里面获取一个随机数
+    def getrandrange(self):
+        print("#randrange(): 从指定范围内按指定基数递增的集合里面获取一个随机数")
+        return random.randrange(self.a,self.b,self.step)
+    
+    #random(): 在[0,1)范围内随机生成一个实数
+    def getrand(self):
+        print("#random(): 在[0,1)范围内随机生成一个实数")
+        return random.random()
+    
+    # seed(): 改变随机数的种子，可以生成同一随机数
+    def getrandseed(self):
+        print("# seed(): 改变随机数的种子，可以生成同一随机数")
+        random.seed(self.seed)
+        return random.random()
+    
+    #给定序列，随机排序
+    def getShuffle(self):
+        print("#给定序列，随机排序")
+        return random.shuffle(self.sequence)
+    
+    #随机生成一个实数在[a,b]范围内
+    def getUniform(self):
+        print("#随机生成一个实数在[a,b]范围内")
+        return random.uniform(self.a,self.b)
+    
+R=RandomFun(1,9,1,20,[2,34,5,4,6,30])
+for i in range(10):
+    print("Number"+str(i)+":") 
+    print(R.getChoice())
+    print(R.getrandrange())
+    print(R.getrand())
+    print(R.getrandseed())
+    print(R.getShuffle())
+    print(R.getUniform(),"\n")
+  
