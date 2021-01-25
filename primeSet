@@ -1,0 +1,24 @@
+import math
+class PrimeSet():
+    def __init__(self,n):
+        self.n=n
+    
+    def getPrimeSet(self):
+        prime=[]
+        for i in range(2,self.n):
+            if self.isPrime(i):
+                prime.insert(-1,i)
+        return prime
+            
+
+    def isPrime(self,n):
+        a=math.ceil(math.sqrt(n))
+        b=True
+        for i in range(2,n):
+            if n%i==0:
+                b=False
+        return b
+    
+    
+b=PrimeSet(200).getPrimeSet()
+print(b)
