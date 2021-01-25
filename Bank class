@@ -7,14 +7,24 @@ class Bank():
         
     def save_money(self, money):
         self.balance+=money
-        print("Save", money, "completed")
-        
+        print("You save", money, ", transaction completed.")
+         
     def withdraw_money(self, money):
         if self.balance>=money:
             self.balance-=money
             print("You have withdrawn", money, '. The balance is ', self.balance)
         else:
-            print("Balance inefficient", 'The balance is ', self.balance)
+            print("Balance inefficient.", 'The current balance is: ', self.balance)
         
     def getBalance(self):
         print("The balance =", self.balance)
+        
+    def descr(self):
+        print("\nThe name of the bank is: ", self.title, "\nThe account name is: ", self.username, "\nThe balance is: ", 
+             self.balance)
+
+Xiaohan=Bank('Xiaohan Li')
+Xiaohan.save_money(10000)
+Xiaohan.getBalance()
+Xiaohan.withdraw_money(100000)
+Xiaohan.descr()
