@@ -1,0 +1,20 @@
+class Bank():
+    title="Construct Bank"
+    def __init__(self,username):
+        self.username=username
+        self.balance=0
+        self.title="Construct Bank"
+        
+    def save_money(self, money):
+        self.balance+=money
+        print("Save", money, "completed")
+        
+    def withdraw_money(self, money):
+        if self.balance>=money:
+            self.balance-=money
+            print("You have withdrawn", money, '. The balance is ', self.balance)
+        else:
+            print("Balance inefficient", 'The balance is ', self.balance)
+        
+    def getBalance(self):
+        print("The balance =", self.balance)
