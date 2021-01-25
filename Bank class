@@ -22,9 +22,15 @@ class Bank():
     def descr(self):
         print("\nThe name of the bank is: ", self.title, "\nThe account name is: ", self.username, "\nThe balance is: ", 
              self.balance)
+        
+   # __str__() 方法告诉Python在打印一个对象时，具体显示什么内容。 
+    def __str__(self):
+        msg="\nThe name of the bank is: " +str(self.title)+ "\nThe account name is: " + self.username+ "\nThe balance is:"+ str(self.balance)
+        return msg
+    
 
 Xiaohan=Bank('Xiaohan Li')
 Xiaohan.save_money(10000)
 Xiaohan.getBalance()
 Xiaohan.withdraw_money(100000)
-Xiaohan.descr()
+print(Xiaohan)
