@@ -56,3 +56,15 @@ eval('math.sin(a*b)')
 print(hex(98))
 print(oct(98))
 print(ord('a'))
+
+def fib5(n):
+    if n==0:
+        return [1]
+    elif n==1:
+        return [1,1]
+    else:
+        fibs=[1,1]
+        for i in range(2,n+1):
+            fibs.append(fibs[-1]+fibs[-2])
+        return fibs
+print(fib5(10))
