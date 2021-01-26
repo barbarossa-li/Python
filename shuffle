@@ -1,0 +1,11 @@
+import random
+b=[]
+for i in range(10):
+    b.insert(-1,random.randrange(-100,100,10))
+a=b[:]
+i=0
+while i<20:
+    random.shuffle(b)
+    print(a)
+    print(b)
+    i+=1
