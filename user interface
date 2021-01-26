@@ -1,0 +1,31 @@
+def interface(s1,s2,num):
+    for i in range(num):
+        print("*",end="")
+    print(s1,end="")
+    for i in range(num):
+        print("*",end="")
+    print(s2,end="")
+    for i in range(num):
+        print("*",end="")
+
+def userInterface():
+    s=["开户(1)","销户(2)","查询(3)",
+       "转账(4)","取款(5)","存款(6)",
+    "锁定(7)","解锁(8)","改密(9)",
+       "补卡(0)","退 出 系 统(q)"]
+    
+    for i in range(60):
+        print("*",end="")
+    print("")   
+    for i in range(0,9,2):
+        interface(s[i],s[i+1],15)
+        print("") 
+    for i in range(23):
+            print("*",end="")
+    print(s[10], end="")
+    for i in range(23):
+            print("*",end="")
+    print("")
+    for i in range(60):
+            print("*",end="")    
+userInterface()
