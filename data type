@@ -1,0 +1,77 @@
+import random
+def diamond(num): 
+    for a in range(-num,num):
+        for b in range(-num,num):
+            if abs(a)+abs(b)>=num:    
+                print("*",end=' ')
+            else:
+                print(" ",end=' ')
+        print()
+        
+diamond(10) 
+
+name='ad home'
+print(name.title())
+print(name.upper())
+print(name.lower())
+
+first_name='ada'
+last_name='lovelace'
+str=' python '
+print(str.rstrip())
+print(str.lstrip())
+print(str.strip())
+message="One of python's strength is its diverse community"
+print(message)
+list=['a','y','b','l','c','d','e']
+del list[2]
+print(list)
+print(list.pop())
+print(list)
+
+list.remove('a')
+print(list)
+print(sorted(list))
+print(list)
+list.sort(reverse=True)
+print(list)
+list.reverse()
+list.reverse()
+print(list)
+print(len(list))
+'''
+number=list(range(1,6))
+print(number)
+
+'''
+x=[]
+for i in range(20):
+    x.append(random.randrange(1,50))
+print(x)
+print(min(x))
+print(max(x))
+#print(mean(x))
+print(sum(x))
+squares=[value**3 for value in range(1,11)]
+print(squares)
+1 in squares
+y=[]
+for i in range(10):
+    y.append(random.randrange(1,50))
+print(y)
+for i in y:
+    if i in x:
+        print("Here you are: %d"%i+'.')
+    else:
+        print("Sorry, we don't have such item %d" %(i) +'.')
+        
+alien_0={'color':'green','points':5}
+print(alien_0['color'])
+print(alien_0['points'])
+print(alien_0)
+alien_0['x_position']=0
+alien_0['y_position']=10
+print(alien_0)
+alien_0['color']='yellow'
+print(alien_0)
+ 
