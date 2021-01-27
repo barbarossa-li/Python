@@ -1,0 +1,34 @@
+def openAccount():
+    '''
+    name = input("请输入您的姓名：")
+ idCard = input("请输入您的身份证号：")
+ phone = input("请输入您的电话号码：")
+ passwd = input("请输入账号密码：")
+ balance = int(input("请输入您的金额："))
+    '''
+    
+    user={'name':'请输入您的姓名:','idCard':'请输入您的身份证号:',
+         'phone':'请输入电话密码:','passwd':'请输入账号密码:',
+         'balance':'请输入您的金额'}
+    for k ,v in user.items():
+        k=input(v)
+    return
+
+a=openAccount()    
+
+prompt='Please enter sth. which i will  repeat to you.\n'
+active=True
+while active:
+    message=input(prompt)
+    if message=='quit':
+        active=False
+        print('quit')
+    else:
+        print(message)
+
+
+
+
+
+    
+  
